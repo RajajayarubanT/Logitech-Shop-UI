@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #16B2E5;
+  --primary-light-color: #40CAEF;
+  --secondary-color: #111111;
+  --background-color: #FEFEFE;
+  --secondary-light-color: #FFFFFF;
+  --text-light-color: #ffff;
+  --text-gray-color: #5C636B;
+  --screen-width: 380px;
+  --screen-height: 750px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+@-webkit-keyframes appear {
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mobile-frame-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00000a;
+}
+
+.mobile-frame-iphone14 {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  max-width: var(--screen-width);
+  max-height: var(--screen-height);
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: 0 0 0.1em 0.25em hsl(44, 20%, 25%), 0 0 0 0.4em hsl(44, 30%, 85%);
+  box-sizing: border-box;
+  /* transform: scale3d(1.1, 1.1, 1); */
+  /* opacity: 0; */
+  /* animation: appear 1s cubic-bezier(0.15, 0, 0.333, 1) forwards; */
+  webkit-backface-visibility: hidden;
+  aspect-ratio: 37/76;
+  position: relative;
+  background: #fff;
+}
+
+.project-container-main {
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-container-background {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-container-background section {
+  width: 100%;
+  -webkit-transform: skew(0, -20deg) translateY(calc(50%/-5));
+  -ms-transform: skew(0, -20deg) translateY(calc(50%/-5));
+  transform: skew(0, -20deg) translateY(calc(50%/-5));
+  min-height: 75%;
+  background: var(--primary-color);
+}
+
+
+.project-container-background section:not(:last-child) * {
+  /* -webkit-transform: skew(0, 4.76deg) translateY(calc(50vw/100)); */
+  /* -ms-transform: skew(0, 4.76deg) translateY(calc(50vw/100)); */
+  /* transform: skew(0, 4.76deg) translateY(calc(50vw/100)); */
+  margin-top: calc(50vw/-12);
+}
+
+.project-container-background section:last-child {
+  position: relative;
+  margin-top: calc(100vw/-12);
+  padding-top: calc(100vw/12);
+  min-height: 50vh;
+  background: var(--secondary-color);
+}
+
+
+
+.project-container-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.project-container-content::-webkit-scrollbar {
+  width: 0px;
+}
+
+.project-header-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.header-item img {
+  width: 110px;
+}
+
+.project-content-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.content-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-item-banner img {
+  width: 90%;
+}
+
+.content-item-details {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.details-title {
+  color: var(--text-light-color);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.details-desc {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: .5px;
+}
+
+.project-fotter-main {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fotter-items {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fotter-item {
+  color: var(--text-light-color);
+  width: 95px;
+  height: 78px;
+  background: var(--primary-color);
+  border-radius: 50% 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  cursor: pointer;
+}
